@@ -1,0 +1,57 @@
+html{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    background: url("../img/background.jpg") no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#navbar{
+    display: grid;
+    background: rgba(0, 0,0, 0.4);
+    grid-template-columns: 8fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 0.5em;
+    font-size: 2em;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 2em;
+}
+
+#homeButton , #menuButton , #contactButton , #aboutButton{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: inherit;
+    color: inherit;
+    font-style: inherit;
+}
+
+#menu{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 80%;
+    padding: 2em;
+}
+
+.foodItem{
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    place-items: center;
+}
+
+#foodItemName{
+    font-size: 1.3em;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    background: rgba(0, 0,0, 0.6);
+}
