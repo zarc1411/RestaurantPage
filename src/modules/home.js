@@ -11,6 +11,7 @@ const Home = (() => {
     const createLogo = () => {
         const logoSpan = document.createElement("span");
         logoSpan.innerText = "YOURHOME";
+        logoSpan.setAttribute("id" , "logo");
         navbarDiv.appendChild(logoSpan);
     }
 
@@ -42,6 +43,16 @@ const Home = (() => {
         navbarDiv.appendChild(contactButton);
     }
 
+    const createCenterText = () => {
+        const centerTextDiv = document.createElement("div");
+        centerTextDiv.setAttribute("id" , "centerText");
+        const text = document.createElement("span");
+        text.innerText = "We will, make you feel at home.";
+        contentDiv.appendChild(centerTextDiv);
+        centerTextDiv.appendChild(text);
+    }
+
+    
     const loadNavigationBar = () => {
         createNavBar();
         createLogo();
@@ -51,7 +62,7 @@ const Home = (() => {
         createContactButton();
     }
 
-    return { loadNavigationBar};
+    return { loadNavigationBar , createCenterText};
 })();
 
 export default Home;
