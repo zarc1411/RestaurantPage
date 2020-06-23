@@ -1,57 +1,118 @@
-html{
-    margin: 0;
-    padding: 0;
-    display: grid;
-    background: url("../img/background.jpg") no-repeat center fixed;
+html {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) , url("../img/background.jpg") no-repeat center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-body{
+html::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+body , html {
     margin: 0;
     padding: 0;
+    height: 100%;
+    display: grid;
 }
 
-#navbar{
+#navbar {
     display: grid;
-    background: rgba(0, 0,0, 0.4);
     grid-template-columns: 8fr 1fr 1fr 1fr 1fr;
     align-items: center;
     padding: 0.5em;
     font-size: 2em;
     color: white;
-    font-family: 'Lato', sans-serif;
-    margin-bottom: 2em;
 }
 
-#homeButton , #menuButton , #contactButton , #aboutButton{
+#centerText{
+    margin: auto;
+    height: 8em;
+    width: 20em;
+    display: grid;
+    place-items: center;
+    font-size: 4.3em;
+    /*font-family: 'Spinnaker', sans-serif;*/
+    /*font-family: 'Alegreya Sans SC', sans-serif;*/
+    font-family: 'Kreon', serif;
+    color: white;
+    transform: scale(0.8);
+}
+
+#logo {
+    font-family: 'Raleway', sans-serif;
+}
+
+#homeButton, #menuButton, #contactButton, #aboutButton {
     border: none;
     outline: none;
     background-color: transparent;
     font-size: inherit;
     color: inherit;
-    font-style: inherit;
+    font-family: 'Spinnaker', sans-serif;
+    transition: all .2s ease-in-out;
 }
 
-#menu{
+#homeButton:hover , #menuButton:hover , #contactButton:hover , #aboutButton:hover{
+    color: black;
+    transform: scale(1.1);
+}
+
+#menu {
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 80%;
-    padding: 2em;
+    grid-row-gap: 1em;
+    transform: scale(0.8);
 }
 
-.foodItem{
+.foodItem {
     display: grid;
     grid-template-rows: 5fr 1fr;
     place-items: center;
+    grid-row-gap: 1em;
+    transition: all .2s ease-in-out;
 }
 
-#foodItemName{
+.foodItem:hover{
+    transform: scale(1.1);
+}
+#foodItemName {
     font-size: 1.3em;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Spinnaker', sans-serif;
     color: white;
-    background: rgba(0, 0,0, 0.6);
+}
+
+#aboutTextDiv{
+    margin: auto;
+    height: 8em;
+    width: 20em;
+    display: grid;
+    place-items: center;
+    font-size: 2em;
+    color: white;
+    font-family: 'Kreon', serif;
+    padding: 3em;
+}
+
+#contactInfo{
+    margin: auto;
+    margin-top: 2em;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 40em;
+    width: 30em;
+}
+
+#timingDiv , #phoneDiv , #emailDiv , #locationDiv{ 
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
+    place-items: center;
+    font-family: 'Kreon', serif;
+    color: white;
+    font-size: 1.2em;
 }
