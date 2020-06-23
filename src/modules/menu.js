@@ -33,7 +33,6 @@ const Menu = (function(){
         addDetailsToMenu();
         addFoodItems();
     }
-
     return {loadMenu};
 })();
 
