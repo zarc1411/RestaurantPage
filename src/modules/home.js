@@ -8,39 +8,18 @@ const Home = (() => {
         contentDiv.appendChild(navbarDiv);
     }
 
+    const createButton = (attribute , text) => {
+        const button = document.createElement("button");
+        button.setAttribute("id" , attribute);
+        button.innerText = text;
+        navbarDiv.appendChild(button);
+    }
+
     const createLogo = () => {
         const logoSpan = document.createElement("span");
         logoSpan.innerText = "YOURHOME";
         logoSpan.setAttribute("id" , "logo");
         navbarDiv.appendChild(logoSpan);
-    }
-
-    const createHomeButton = () => {
-        const homeButton = document.createElement("button");
-        homeButton.setAttribute("id", "homeButton");
-        homeButton.innerText = "Home";
-        navbarDiv.appendChild(homeButton);
-    }
-
-    const createMenuButton = () => {
-        const menuButton = document.createElement("button");
-        menuButton.setAttribute("id", "menuButton");
-        menuButton.innerText = "Menu";
-        navbarDiv.appendChild(menuButton);
-    }
-
-    const createAboutButton = () => {
-        const aboutButton = document.createElement("button");
-        aboutButton.setAttribute("id", "aboutButton");
-        aboutButton.innerText = "About";
-        navbarDiv.appendChild(aboutButton);
-    }
-
-    const createContactButton = () => {
-        const contactButton = document.createElement("button");
-        contactButton.setAttribute("id", "contactButton");
-        contactButton.innerText = "Contact";
-        navbarDiv.appendChild(contactButton);
     }
 
     const createCenterText = () => {
@@ -56,10 +35,10 @@ const Home = (() => {
     const loadNavigationBar = () => {
         createNavBar();
         createLogo();
-        createHomeButton();
-        createMenuButton();
-        createAboutButton();
-        createContactButton();
+        createButton("homeButton" , "Home");
+        createButton("menuButton" , "Menu");
+        createButton("aboutButton" , "About");
+        createButton("contactButton" , "Contact");
     }
 
     return { loadNavigationBar , createCenterText};
