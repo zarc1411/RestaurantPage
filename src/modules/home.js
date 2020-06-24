@@ -47,7 +47,7 @@ const Home = (() => {
         const centerTextDiv = document.createElement("div");
         centerTextDiv.setAttribute("id" , "centerText");
         const text = document.createElement("span");
-        text.innerText = "We will, make you feel at home.";
+        text.innerText = "We will make you feel at home.";
         contentDiv.appendChild(centerTextDiv);
         centerTextDiv.appendChild(text);
     }
